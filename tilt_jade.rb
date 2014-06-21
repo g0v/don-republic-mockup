@@ -17,14 +17,14 @@ module Tilt
 
     def evaluate(scope, locals, &block)
 
-      if File.exists?('c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade')
-        jade_cmd = 'node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade --path . -O "{require: require}" -P ' 
+      if File.exists?('c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade.js')
+        jade_cmd = 'node c:/users/etblue/appdata/roaming/npm/node_modules/jade/bin/jade.js --path . -O "{require: require}" -P ' 
       else
         jade_cmd = 'jade --path . -O "{require: require}" -P'
       end
 
       pwd = Dir.pwd
-      Dir.chdir(__dir__+'/views')
+      Dir.chdir('views')
       body = Open3.popen3(jade_cmd) do |stdin, stdout, stderr|
         stdin.write data
         stdin.close 
