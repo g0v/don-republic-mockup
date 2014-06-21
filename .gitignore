@@ -1,0 +1,16 @@
+node_modules
+dist
+tmp
+.sass-cache
+app/bower_components
+test/bower_components
+
+build/*
+
+.livescript-cache/
+fire_app_log.txt
+.editorconfig
+_public/*
+public/*
+npm-debug.log
+
