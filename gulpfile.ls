@@ -16,11 +16,6 @@ gulp.task \jade ->
     .pipe gulp-jade locals: jade-options
     .pipe gulp.dest "#build-path"
 
-gulp.task \framework ->
-  gulp.src 'framework/**/*.ls'
-    .pipe gulp-livescript bare: true
-    .pipe gulp.dest 'framework'
-
 gulp.task \ls ->
   gulp.src 'livescript/**/*.ls'
     .pipe gulp-livescript!
@@ -50,6 +45,6 @@ gulp.task \watch, ->
   gulp.watch \src/**/*.ls, <[ls]>
   gulp.watch \src/**/*.sass, <[styl]>
 
-gulp.task \build <[ jade ls framework sass]>
+gulp.task \build <[ jade ls sass]>
 gulp.task \default <[ build ]>
 gulp.task \dev <[ build express watch ]>
