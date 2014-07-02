@@ -28,6 +28,10 @@ gulp.task 'sass' ->
   .pipe gulp.dest "#build-path/css"
   .pipe gulp-livereload server
 
+gulp.task 'assets' ->
+  gulp.src 'public/**/*/*'
+  .pipe gulp.dest "#build-path/"
+
 gulp.task \express, ->
   require! express
   app = express!
@@ -45,6 +49,6 @@ gulp.task \watch, ->
   gulp.watch \src/**/*.ls, <[ls]>
   gulp.watch \src/**/*.sass, <[styl]>
 
-gulp.task \build <[ jade ls sass]>
+gulp.task \build <[ jade ls sass assets]>
 gulp.task \default <[ build ]>
 gulp.task \dev <[ build express watch ]>
