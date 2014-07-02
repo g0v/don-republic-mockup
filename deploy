@@ -3,7 +3,7 @@ set -e -x
 git --version
 upstream=$1
 : ${upstream:=origin}
-: ${REPO:=git@github.com:g0v/don-republic}
+: ${REPO:=git@github.com:g0v/don-republic-mockup}
 : ${output:=_public}
 git fetch $upstream
 if [ `git rev-list HEAD...$upstream/master --count` -ne 0 ]; then
