@@ -54,7 +54,7 @@ Mockup / Prototype
 ## Install dependency
 
     $ npm install
-    $ bower install
+    $ bundle install
 
     Everytime you changed the bower.json, please wire dependency to update index.html
     $ gulp wiredep
