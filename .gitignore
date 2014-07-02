@@ -11,7 +11,7 @@ build/*
 fire_app_log.txt
 .editorconfig
 _public/*
-public/*
+public/css/*
 npm-debug.log
 
 Gemfile.lock
